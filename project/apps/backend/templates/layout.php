@@ -22,26 +22,18 @@
                     <li><a href="#">References</a></li>
                     <li><a href="#">Contacts</a></li>
                 </ul>
-		<br/>
-                <h3 onclick="$(this).next().slideToggle();">+ OE IPTV</h3>
-                <ul class="list">
-                    <li><a href="#">Presentation</a></li>
-                    <li><a href="#">Documentation</a></li>
-                    <li><a href="#">Telechargement</a></li>
-                </ul>
 
-                <h3 onclick="$(this).next().slideToggle();">+ OE SIGNAGE</h3>
-                <ul class="list">
-                    <li><a href="#">Presentation</a></li>
-                    <li><a href="#">Demonstration</a></li>
-                    <li><a href="#">Documentation</a></li>
-                    <li><a href="#">Telechargement</a></li>
-                </ul>
+                <? include_partial('global/admin') ?>
+
+                <br/>
+
+                <? include_component('project', 'widgets')?>
+
             </div>
             <div id="postnavigation" style="margin-top: 30px;margin-left: -10px; font-size: 14px;">
             </div>
       </div>
-      <div id="content" style="background-color: #fff; border: solid 1px #ddd; padding: 10px 20px 20px 20px; float: left; min-width: 800px;">
+      <div id="content" style="background-color: #fff; border: solid 1px #ddd; padding: 10px 20px 20px 20px; margin-top: 10px; float: left; width: 800px;">
         <?php echo $sf_content ?>
       </div>
       <div style="clear: left;"></div>

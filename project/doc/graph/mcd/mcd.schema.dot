@@ -3,33 +3,6 @@ graph G {
 	overlap=false;
 	splines=true;
 
-	nodeGame [
-		label="{<table>Game|<cols>year (integer)\limage_url (string)\licon_url (string)}",
-		shape=record ];
-	nodeQuizAnswer [
-		label="{<table>QuizAnswer|<cols>is_valid (enum)\lposition (integer)}",
-		shape=record ];
-	nodeQuizUser [
-		label="{<table>QuizUser|<cols>sf_guard_user_id (integer)\lcreated_at (timestamp)\lupdated_at (timestamp)}",
-		shape=record ];
-	nodeGallery [
-		label="{<table>Gallery|<cols>position (integer)}",
-		shape=record ];
-	nodeTodoType [
-		label="{<table>TodoType|<cols>name (string)\ldescription (string)}",
-		shape=record ];
-	nodeEvent [
-		label="{<table>Event|<cols>start_at (timestamp)\lend_at (timestamp)\lstart_registration_at (timestamp)\lend_registration_at (timestamp)}",
-		shape=record ];
-	nodePageCategory [
-		label="{<table>PageCategory|<cols>name (string)\ldescription (string)\lroot_id (integer)\llft (integer)\lrgt (integer)\llevel (integer)}",
-		shape=record ];
-	nodeTodoHistory [
-		label="{<table>TodoHistory|<cols>username (string)\lmodule (string)\laction (string)}",
-		shape=record ];
-	nodeEditor [
-		label="{<table>Editor|<cols>logo_url (string)}",
-		shape=record ];
 	nodesfGuardUserGroup [
 		label="{<table>sfGuardUserGroup|<cols>created_at (timestamp)\lupdated_at (timestamp)}",
 		shape=record ];
@@ -54,86 +27,8 @@ graph G {
 	nodesfGuardRememberKey [
 		label="{<table>sfGuardRememberKey|<cols>remember_key (string)\lip_address (string)\lcreated_at (timestamp)\lupdated_at (timestamp)}",
 		shape=record ];
-	nodeVisitor [
-		label="{<table>Visitor|<cols>birthdate (integer)\ldepartment (integer)\lpayment_id (integer)\lcreated_at (timestamp)\lupdated_at (timestamp)}",
-		shape=record ];
-	nodeUserEquipment [
-		label="{<table>UserEquipment|<cols>user_id (integer)\lequipment_type (enum)\lname (string)\ldescription (string)\lchecked_at (string)\lcreated_at (timestamp)\lupdated_at (timestamp)}",
-		shape=record ];
-	nodeQuiz [
-		label="{<table>Quiz|<cols>style (string)\lbackground_color (string)\lis_public (enum)\lstart_at (date)\lend_at (date)\limage (string)\lslug (string)}",
-		shape=record ];
-	nodeShopHistory [
-		label="{<table>ShopHistory|<cols>payment_id (integer)\lsf_guard_user_id (integer)\lcreated_at (timestamp)\lupdated_at (timestamp)}",
-		shape=record ];
-	nodeTodo [
-		label="{<table>Todo|<cols>name (string)\ldescription (string)\lpriority (enum)\lachieved (enum)\lis_private (enum)\lis_active (enum)\ltodo_parent_id (integer)\lcreated_at (timestamp)\lupdated_at (timestamp)}",
-		shape=record ];
-	nodeTodoGroupPermission [
-		label="{<table>TodoGroupPermission|<cols>sf_guard_permission_id (integer)}",
-		shape=record ];
-	nodeStatLink [
-		label="{<table>StatLink|<cols>name (string)\ldescription (string)\llink_type (enum)\lshort_key (string)\lurl (string)\lcounter (integer)\lcreated_at (timestamp)\lupdated_at (timestamp)}",
-		shape=record ];
-	nodeTodoGroup [
-		label="{<table>TodoGroup|<cols>name (string)\ldescription (string)}",
-		shape=record ];
-	nodeShopPos [
-		label="{<table>ShopPos|<cols>name (string)\ldescription (string)}",
-		shape=record ];
-	nodeGalleryPhoto [
-		label="{<table>GalleryPhoto|<cols>album_id (string)}",
-		shape=record ];
-	nodeTodoComment [
-		label="{<table>TodoComment|<cols>sf_guard_user_id (integer)\lcomment (string)\lis_active (enum)\lcreated_at (timestamp)\lupdated_at (timestamp)}",
-		shape=record ];
-	nodeTodoOwner [
-		label="{<table>TodoOwner|<cols>sf_guard_user_id (integer)}",
-		shape=record ];
-	nodePlateform [
-		label="{<table>Plateform|<cols>icon_url (string)}",
-		shape=record ];
-	nodeShopProduct [
-		label="{<table>ShopProduct|<cols>name (string)\ldescription (string)\lquantity (integer)\lsold (integer)\lprice (float)\lcreated_at (timestamp)\lupdated_at (timestamp)\lslug (string)}",
-		shape=record ];
-	nodeQuizRequest [
-		label="{<table>QuizRequest|<cols>position (integer)}",
-		shape=record ];
-	nodePage [
-		label="{<table>Page|<cols>status (enum)\lview_counter (int)\lcreated_at (timestamp)\lupdated_at (timestamp)}",
-		shape=record ];
-	nodeGameTranslation [
-		label="{<table>GameTranslation|<cols>name (string)\ldescription (string)}",
-		shape=record ];
-	nodeGameTypeTranslation [
-		label="{<table>GameTypeTranslation|<cols>name (string)\ldescription (string)}",
-		shape=record ];
-	nodeQuizAnswerTranslation [
-		label="{<table>QuizAnswerTranslation|<cols>name (string)}",
-		shape=record ];
-	nodeGalleryTranslation [
-		label="{<table>GalleryTranslation|<cols>name (string)\ldescription (string)\lslug (string)}",
-		shape=record ];
-	nodeEventTranslation [
-		label="{<table>EventTranslation|<cols>name (string)\ldescription (string)\limage_url (string)}",
-		shape=record ];
-	nodeEditorTranslation [
-		label="{<table>EditorTranslation|<cols>name (string)\ldescription (string)\lwebsite (string)}",
-		shape=record ];
-	nodeQuizTranslation [
-		label="{<table>QuizTranslation|<cols>name (string)\ldescription (string)\lbackground_image (string)}",
-		shape=record ];
-	nodeGalleryPhotoTranslation [
-		label="{<table>GalleryPhotoTranslation|<cols>name (string)\ldescription (string)\lslug (string)}",
-		shape=record ];
-	nodePlateformTranslation [
-		label="{<table>PlateformTranslation|<cols>name (string)\ltag (string)\ldescription (string)\lconstructor (string)}",
-		shape=record ];
-	nodeQuizRequestTranslation [
-		label="{<table>QuizRequestTranslation|<cols>name (string)}",
-		shape=record ];
-	nodePageTranslation [
-		label="{<table>PageTranslation|<cols>name (string)\ldescription (string)\lslug (string)}",
+	nodeproject [
+		label="{<table>project|<cols>name (string)\ldescription (string)\lrepository (string)\lis_public (enum)\lis_active (enum)\lcreated_at (timestamp)\lupdated_at (timestamp)\lslug (string)}",
 		shape=record ];
 
 	nodesfGuardUserGroup [
@@ -145,42 +40,6 @@ graph G {
 	nodesfGuardGroupPermission [
 		label="{<table>sfGuardGroupPermission|<cols>created_at (timestamp)\lupdated_at (timestamp)}",
 		shape=Mrecord ];
-	nodeGameType [
-		label="{<table>GameType|<cols>}",
-		shape=Mrecord ];
-	nodeGameEditor [
-		label="{<table>GameEditor|<cols>}",
-		shape=Mrecord ];
-	nodeGameGameType [
-		label="{<table>GameGameType|<cols>}",
-		shape=Mrecord ];
-	nodeGamePlateform [
-		label="{<table>GamePlateform|<cols>}",
-		shape=Mrecord ];
-	nodeGame [
-		label="{<table>Game|<cols>}",
-		shape=Mrecord ];
-	nodeQuizAnswerQuizRequest [
-		label="{<table>QuizAnswerQuizRequest|<cols>}",
-		shape=Mrecord ];
-	nodeQuizAnswer [
-		label="{<table>QuizAnswer|<cols>}",
-		shape=Mrecord ];
-	nodeQuizUserQuizAnswer [
-		label="{<table>QuizUserQuizAnswer|<cols>}",
-		shape=Mrecord ];
-	nodeGallery [
-		label="{<table>Gallery|<cols>}",
-		shape=Mrecord ];
-	nodeEvent [
-		label="{<table>Event|<cols>}",
-		shape=Mrecord ];
-	nodePageCategory [
-		label="{<table>PageCategory|<cols>}",
-		shape=Mrecord ];
-	nodeEditor [
-		label="{<table>Editor|<cols>}",
-		shape=Mrecord ];
 	nodesfGuardUser [
 		label="{<table>sfGuardUser|<cols>}",
 		shape=Mrecord ];
@@ -189,66 +48,6 @@ graph G {
 		shape=Mrecord ];
 	nodesfGuardPermission [
 		label="{<table>sfGuardPermission|<cols>}",
-		shape=Mrecord ];
-	nodeVisitorEvent [
-		label="{<table>VisitorEvent|<cols>}",
-		shape=Mrecord ];
-	nodeUserEquipment [
-		label="{<table>UserEquipment|<cols>}",
-		shape=Mrecord ];
-	nodeQuiz [
-		label="{<table>Quiz|<cols>}",
-		shape=Mrecord ];
-	nodeShopHistoryShopProduct [
-		label="{<table>ShopHistoryShopProduct|<cols>}",
-		shape=Mrecord ];
-	nodeTodoTodoGroup [
-		label="{<table>TodoTodoGroup|<cols>}",
-		shape=Mrecord ];
-	nodeTodo [
-		label="{<table>Todo|<cols>}",
-		shape=Mrecord ];
-	nodeTodoGroupPermissionTodoGroup [
-		label="{<table>TodoGroupPermissionTodoGroup|<cols>}",
-		shape=Mrecord ];
-	nodeTodoGroup [
-		label="{<table>TodoGroup|<cols>}",
-		shape=Mrecord ];
-	nodeShopPos [
-		label="{<table>ShopPos|<cols>}",
-		shape=Mrecord ];
-	nodeGalleryPhotoGallery [
-		label="{<table>GalleryPhotoGallery|<cols>}",
-		shape=Mrecord ];
-	nodeGalleryPhoto [
-		label="{<table>GalleryPhoto|<cols>}",
-		shape=Mrecord ];
-	nodeTodoCommentTodo [
-		label="{<table>TodoCommentTodo|<cols>}",
-		shape=Mrecord ];
-	nodeTodoOwnerTodo [
-		label="{<table>TodoOwnerTodo|<cols>}",
-		shape=Mrecord ];
-	nodePlateform [
-		label="{<table>Plateform|<cols>}",
-		shape=Mrecord ];
-	nodeShopProductShopPos [
-		label="{<table>ShopProductShopPos|<cols>}",
-		shape=Mrecord ];
-	nodeShopProduct [
-		label="{<table>ShopProduct|<cols>}",
-		shape=Mrecord ];
-	nodeQuizRequestQuiz [
-		label="{<table>QuizRequestQuiz|<cols>}",
-		shape=Mrecord ];
-	nodeQuizRequest [
-		label="{<table>QuizRequest|<cols>}",
-		shape=Mrecord ];
-	nodePagePageCategory [
-		label="{<table>PagePageCategory|<cols>}",
-		shape=Mrecord ];
-	nodePage [
-		label="{<table>Page|<cols>}",
 		shape=Mrecord ];
 
 	nodesfGuardUserGroup -- nodesfGuardUser [
@@ -275,66 +74,6 @@ graph G {
 		headlabel="0,n",
 		label="(Permission)",
 		labeldistance=3 ];
-	nodeGameEditor -- nodeEditor [
-		headlabel="0,n",
-		label="",
-		labeldistance=3 ];
-	nodeGameGameType -- nodeGameType [
-		headlabel="0,n",
-		label="",
-		labeldistance=3 ];
-	nodeGamePlateform -- nodePlateform [
-		headlabel="0,n",
-		label="",
-		labeldistance=3 ];
-	nodeGame -- nodeGameTranslation [
-		headlabel="0,1",
-		label="(Translation)",
-		labeldistance=3 ];
-	nodeQuizAnswerQuizRequest -- nodeQuizRequest [
-		headlabel="0,n",
-		label="",
-		labeldistance=3 ];
-	nodeQuizAnswer -- nodeQuizUser [
-		headlabel="0,1",
-		label="",
-		labeldistance=3 ];
-	nodeQuizAnswer -- nodeQuizAnswerTranslation [
-		headlabel="0,1",
-		label="(Translation)",
-		labeldistance=3 ];
-	nodeQuizUserQuizAnswer -- nodeQuizAnswer [
-		headlabel="0,n",
-		label="",
-		labeldistance=3 ];
-	nodeGallery -- nodeGalleryPhoto [
-		headlabel="0,1",
-		label="",
-		labeldistance=3 ];
-	nodeGallery -- nodeGalleryTranslation [
-		headlabel="0,1",
-		label="(Translation)",
-		labeldistance=3 ];
-	nodeEvent -- nodeVisitor [
-		headlabel="0,1",
-		label="",
-		labeldistance=3 ];
-	nodeEvent -- nodeEventTranslation [
-		headlabel="0,1",
-		label="(Translation)",
-		labeldistance=3 ];
-	nodePageCategory -- nodePage [
-		headlabel="0,1",
-		label="",
-		labeldistance=3 ];
-	nodeEditor -- nodeGame [
-		headlabel="0,1",
-		label="",
-		labeldistance=3 ];
-	nodeEditor -- nodeEditorTranslation [
-		headlabel="0,1",
-		label="(Translation)",
-		labeldistance=3 ];
 	nodesfGuardUser -- nodesfGuardUserPermission [
 		headlabel="0,1",
 		label="",
@@ -359,112 +98,10 @@ graph G {
 		headlabel="0,1",
 		label="",
 		labeldistance=3 ];
-	nodeVisitorEvent -- nodeEvent [
-		headlabel="0,n",
-		label="",
-		labeldistance=3 ];
-	nodeUserEquipment -- nodeSfGuardUser [
-		headlabel="0,1",
-		label="",
-		labeldistance=3 ];
-	nodeQuiz -- nodeQuizRequest [
-		headlabel="0,1",
-		label="",
-		labeldistance=3 ];
-	nodeQuiz -- nodeQuizTranslation [
-		headlabel="0,1",
-		label="(Translation)",
-		labeldistance=3 ];
-	nodeShopHistoryShopProduct -- nodeShopProduct [
-		headlabel="0,n",
-		label="",
-		labeldistance=3 ];
-	nodeTodoTodoGroup -- nodeTodoGroup [
-		headlabel="0,n",
-		label="",
-		labeldistance=3 ];
-	nodeTodo -- nodeTodoOwner [
-		headlabel="0,1",
-		label="",
-		labeldistance=3 ];
-	nodeTodo -- nodeTodoComment [
-		headlabel="0,1",
-		label="",
-		labeldistance=3 ];
-	nodeTodoGroupPermissionTodoGroup -- nodeTodoGroup [
-		headlabel="0,n",
-		label="",
-		labeldistance=3 ];
-	nodeTodoGroup -- nodeTodoGroupPermission [
-		headlabel="0,1",
-		label="",
-		labeldistance=3 ];
-	nodeTodoGroup -- nodeTodo [
-		headlabel="0,1",
-		label="",
-		labeldistance=3 ];
-	nodeShopPos -- nodeShopProduct [
-		headlabel="0,1",
-		label="",
-		labeldistance=3 ];
-	nodeGalleryPhotoGallery -- nodeGallery [
-		headlabel="0,n",
-		label="",
-		labeldistance=3 ];
-	nodeGalleryPhoto -- nodeGalleryPhotoTranslation [
-		headlabel="0,1",
-		label="(Translation)",
-		labeldistance=3 ];
-	nodeTodoCommentTodo -- nodeTodo [
-		headlabel="0,n",
-		label="",
-		labeldistance=3 ];
-	nodeTodoOwnerTodo -- nodeTodo [
-		headlabel="0,n",
-		label="",
-		labeldistance=3 ];
-	nodePlateform -- nodeGame [
-		headlabel="0,1",
-		label="",
-		labeldistance=3 ];
-	nodePlateform -- nodePlateformTranslation [
-		headlabel="0,1",
-		label="(Translation)",
-		labeldistance=3 ];
-	nodeShopProductShopPos -- nodeShopPos [
-		headlabel="0,n",
-		label="",
-		labeldistance=3 ];
-	nodeShopProduct -- nodeShopHistory [
-		headlabel="0,1",
-		label="",
-		labeldistance=3 ];
-	nodeQuizRequestQuiz -- nodeQuiz [
-		headlabel="0,n",
-		label="",
-		labeldistance=3 ];
-	nodeQuizRequest -- nodeQuizAnswer [
-		headlabel="0,1",
-		label="",
-		labeldistance=3 ];
-	nodeQuizRequest -- nodeQuizRequestTranslation [
-		headlabel="0,1",
-		label="(Translation)",
-		labeldistance=3 ];
-	nodePagePageCategory -- nodePageCategory [
-		headlabel="0,n",
-		label="",
-		labeldistance=3 ];
-	nodePage -- nodePageTranslation [
-		headlabel="0,1",
-		label="(Translation)",
-		labeldistance=3 ];
 
 	nodesfGuardUser -- nodesfGuardRememberKey [
 		arrowhead=normal ];
 	nodesfGuardUser -- nodesfGuardForgotPassword [
-		arrowhead=normal ];
-	nodeTodo -- nodeTodo [
 		arrowhead=normal ];
 	nodesfGuardForgotPassword -- nodeBasesfGuardForgotPassword [
 		arrowhead=normal ];

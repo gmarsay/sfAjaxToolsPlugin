@@ -3,36 +3,6 @@ digraph G {
 	overlap=false;
 	splines=true;
 
-	nodegame [
-		label="{<table>game|<cols>id (integer) [PK]\lyear (integer)\leditor_id (integer)\lgame_type_id (integer)\lplateform_id (integer)\limage_url (string)\licon_url (string)\l}",
-		shape=record ];
-	nodegame_type [
-		label="{<table>game_type|<cols>id (integer) [PK]\l}",
-		shape=record ];
-	nodequiz_answer [
-		label="{<table>quiz_answer|<cols>id (integer) [PK]\lis_valid (enum)\lposition (integer)\lquiz_request_id (integer)\l}",
-		shape=record ];
-	nodequiz_user [
-		label="{<table>quiz_user|<cols>id (integer) [PK]\lquiz_answer_id (integer)\lsf_guard_user_id (integer)\lcreated_at (timestamp)\lupdated_at (timestamp)\l}",
-		shape=record ];
-	nodegallery [
-		label="{<table>gallery|<cols>id (integer) [PK]\lposition (integer)\l}",
-		shape=record ];
-	nodetodo_type [
-		label="{<table>todo_type|<cols>id (integer) [PK]\lname (string)\ldescription (string)\l}",
-		shape=record ];
-	nodeevent [
-		label="{<table>event|<cols>id (integer) [PK]\lstart_at (timestamp)\lend_at (timestamp)\lstart_registration_at (timestamp)\lend_registration_at (timestamp)\l}",
-		shape=record ];
-	nodepage_category [
-		label="{<table>page_category|<cols>id (integer) [PK]\lname (string)\ldescription (string)\lroot_id (integer)\llft (integer)\lrgt (integer)\llevel (integer)\l}",
-		shape=record ];
-	nodetodo_history [
-		label="{<table>todo_history|<cols>id (integer) [PK]\lusername (string)\lmodule (string)\laction (string)\l}",
-		shape=record ];
-	nodeeditor [
-		label="{<table>editor|<cols>id (integer) [PK]\llogo_url (string)\l}",
-		shape=record ];
 	nodesf_guard_user_group [
 		label="{<table>sf_guard_user_group|<cols>user_id (integer) [PK]\lgroup_id (integer) [PK]\lcreated_at (timestamp)\lupdated_at (timestamp)\l}",
 		shape=record ];
@@ -57,98 +27,10 @@ digraph G {
 	nodesf_guard_remember_key [
 		label="{<table>sf_guard_remember_key|<cols>id (integer) [PK]\luser_id (integer)\lremember_key (string)\lip_address (string)\lcreated_at (timestamp)\lupdated_at (timestamp)\l}",
 		shape=record ];
-	nodevisitor [
-		label="{<table>visitor|<cols>id (integer) [PK]\lbirthdate (integer)\ldepartment (integer)\levent_id (integer)\lpayment_id (integer)\lcreated_at (timestamp)\lupdated_at (timestamp)\l}",
-		shape=record ];
-	nodeuser_equipment [
-		label="{<table>user_equipment|<cols>id (integer) [PK]\luser_id (integer)\lequipment_type (enum)\lname (string)\ldescription (string)\lchecked_at (string)\lcreated_at (timestamp)\lupdated_at (timestamp)\l}",
-		shape=record ];
-	nodequiz [
-		label="{<table>quiz|<cols>id (integer) [PK]\lstyle (string)\lbackground_color (string)\lis_public (enum)\lstart_at (date)\lend_at (date)\limage (string)\lslug (string)\l}",
-		shape=record ];
-	nodeshop_history [
-		label="{<table>shop_history|<cols>id (integer) [PK]\lshop_product_id (integer)\lpayment_id (integer)\lsf_guard_user_id (integer)\lcreated_at (timestamp)\lupdated_at (timestamp)\l}",
-		shape=record ];
-	nodetodo [
-		label="{<table>todo|<cols>id (integer) [PK]\lname (string)\ldescription (string)\lpriority (enum)\lachieved (enum)\lis_private (enum)\lis_active (enum)\ltodo_parent_id (integer)\ltodo_group_id (integer)\lcreated_at (timestamp)\lupdated_at (timestamp)\l}",
-		shape=record ];
-	nodetodo_group_permission [
-		label="{<table>todo_group_permission|<cols>id (integer) [PK]\ltodo_group_id (integer)\lsf_guard_permission_id (integer)\l}",
-		shape=record ];
-	nodestat_link [
-		label="{<table>stat_link|<cols>id (integer) [PK]\lname (string)\ldescription (string)\llink_type (enum)\lshort_key (string)\lurl (string)\lcounter (integer)\lcreated_at (timestamp)\lupdated_at (timestamp)\l}",
-		shape=record ];
-	nodetodo_group [
-		label="{<table>todo_group|<cols>id (integer) [PK]\lname (string)\ldescription (string)\l}",
-		shape=record ];
-	nodeshop_pos [
-		label="{<table>shop_pos|<cols>id (integer) [PK]\lname (string)\ldescription (string)\l}",
-		shape=record ];
-	nodegallery_photo [
-		label="{<table>gallery_photo|<cols>id (integer) [PK]\lalbum_id (string)\lgallery_id (integer)\l}",
-		shape=record ];
-	nodetodo_comment [
-		label="{<table>todo_comment|<cols>id (integer) [PK]\ltodo_id (integer)\lsf_guard_user_id (integer)\lcomment (string)\lis_active (enum)\lcreated_at (timestamp)\lupdated_at (timestamp)\l}",
-		shape=record ];
-	nodetodo_owner [
-		label="{<table>todo_owner|<cols>id (integer) [PK]\ltodo_id (integer)\lsf_guard_user_id (integer)\l}",
-		shape=record ];
-	nodeplateform [
-		label="{<table>plateform|<cols>id (integer) [PK]\licon_url (string)\l}",
-		shape=record ];
-	nodeshop_product [
-		label="{<table>shop_product|<cols>id (integer) [PK]\lname (string)\ldescription (string)\lquantity (integer)\lsold (integer)\lprice (float)\lshop_pos_id (integer)\lcreated_at (timestamp)\lupdated_at (timestamp)\lslug (string)\l}",
-		shape=record ];
-	nodequiz_request [
-		label="{<table>quiz_request|<cols>id (integer) [PK]\lposition (integer)\lquiz_id (integer)\l}",
-		shape=record ];
-	nodepage [
-		label="{<table>page|<cols>id (integer) [PK]\lstatus (enum)\lpage_category_id (integer)\lview_counter (int)\lcreated_at (timestamp)\lupdated_at (timestamp)\l}",
-		shape=record ];
-	nodegame_translation [
-		label="{<table>game_translation|<cols>id (integer) [PK]\lname (string)\ldescription (string)\llang (string) [PK]\l}",
-		shape=record ];
-	nodegame_type_translation [
-		label="{<table>game_type_translation|<cols>id (integer) [PK]\lname (string)\ldescription (string)\llang (string) [PK]\l}",
-		shape=record ];
-	nodequiz_answer_translation [
-		label="{<table>quiz_answer_translation|<cols>id (integer) [PK]\lname (string)\llang (string) [PK]\l}",
-		shape=record ];
-	nodegallery_translation [
-		label="{<table>gallery_translation|<cols>id (integer) [PK]\lname (string)\ldescription (string)\llang (string) [PK]\lslug (string)\l}",
-		shape=record ];
-	nodeevent_translation [
-		label="{<table>event_translation|<cols>id (integer) [PK]\lname (string)\ldescription (string)\limage_url (string)\llang (string) [PK]\l}",
-		shape=record ];
-	nodeeditor_translation [
-		label="{<table>editor_translation|<cols>id (integer) [PK]\lname (string)\ldescription (string)\lwebsite (string)\llang (string) [PK]\l}",
-		shape=record ];
-	nodequiz_translation [
-		label="{<table>quiz_translation|<cols>id (integer) [PK]\lname (string)\ldescription (string)\lbackground_image (string)\llang (string) [PK]\l}",
-		shape=record ];
-	nodegallery_photo_translation [
-		label="{<table>gallery_photo_translation|<cols>id (integer) [PK]\lname (string)\ldescription (string)\llang (string) [PK]\lslug (string)\l}",
-		shape=record ];
-	nodeplateform_translation [
-		label="{<table>plateform_translation|<cols>id (integer) [PK]\lname (string)\ltag (string)\ldescription (string)\lconstructor (string)\llang (string) [PK]\l}",
-		shape=record ];
-	nodequiz_request_translation [
-		label="{<table>quiz_request_translation|<cols>id (integer) [PK]\lname (string)\llang (string) [PK]\l}",
-		shape=record ];
-	nodepage_translation [
-		label="{<table>page_translation|<cols>id (integer) [PK]\lname (string)\ldescription (string)\llang (string) [PK]\lslug (string)\l}",
+	nodeproject [
+		label="{<table>project|<cols>id (integer) [PK]\lname (string)\ldescription (string)\lrepository (string)\lis_public (enum)\lis_active (enum)\lcreated_at (timestamp)\lupdated_at (timestamp)\lslug (string)\l}",
 		shape=record ];
 
-	nodegame:cols -> nodeeditor:table [
-		label="editor_id=id"];
-	nodegame:cols -> nodegame_type:table [
-		label="game_type_id=id"];
-	nodegame:cols -> nodeplateform:table [
-		label="plateform_id=id"];
-	nodequiz_answer:cols -> nodequiz_request:table [
-		label="quiz_request_id=id"];
-	nodequiz_user:cols -> nodequiz_answer:table [
-		label="quiz_answer_id=id"];
 	nodesf_guard_user_group:cols -> nodesf_guard_user:table [
 		label="user_id=id"];
 	nodesf_guard_user_group:cols -> nodesf_guard_group:table [
@@ -165,46 +47,4 @@ digraph G {
 		label="permission_id=id"];
 	nodesf_guard_remember_key:cols -> nodesf_guard_user:table [
 		label="user_id=id"];
-	nodevisitor:cols -> nodeevent:table [
-		label="event_id=id"];
-	nodeshop_history:cols -> nodeshop_product:table [
-		label="shop_product_id=id"];
-	nodetodo:cols -> nodetodo_group:table [
-		label="todo_group_id=id"];
-	nodetodo_group_permission:cols -> nodetodo_group:table [
-		label="todo_group_id=id"];
-	nodegallery_photo:cols -> nodegallery:table [
-		label="gallery_id=id"];
-	nodetodo_comment:cols -> nodetodo:table [
-		label="todo_id=id"];
-	nodetodo_owner:cols -> nodetodo:table [
-		label="todo_id=id"];
-	nodeshop_product:cols -> nodeshop_pos:table [
-		label="shop_pos_id=id"];
-	nodequiz_request:cols -> nodequiz:table [
-		label="quiz_id=id"];
-	nodepage:cols -> nodepage_category:table [
-		label="page_category_id=id"];
-	nodegame_translation:cols -> nodegame:table [
-		label="id=id"];
-	nodegame_type_translation:cols -> nodegame_type:table [
-		label="id=id"];
-	nodequiz_answer_translation:cols -> nodequiz_answer:table [
-		label="id=id"];
-	nodegallery_translation:cols -> nodegallery:table [
-		label="id=id"];
-	nodeevent_translation:cols -> nodeevent:table [
-		label="id=id"];
-	nodeeditor_translation:cols -> nodeeditor:table [
-		label="id=id"];
-	nodequiz_translation:cols -> nodequiz:table [
-		label="id=id"];
-	nodegallery_photo_translation:cols -> nodegallery_photo:table [
-		label="id=id"];
-	nodeplateform_translation:cols -> nodeplateform:table [
-		label="id=id"];
-	nodequiz_request_translation:cols -> nodequiz_request:table [
-		label="id=id"];
-	nodepage_translation:cols -> nodepage:table [
-		label="id=id"];
 }

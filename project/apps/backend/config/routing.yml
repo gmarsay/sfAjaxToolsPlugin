@@ -1,6 +1,16 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
+# project rules
+project_index:
+  url: /project
+  param: { module: project, action: index }
+
+project_view:
+  url: /project/view/:slug
+  param: { module: project, action: view }
+
+
 # default rules
 homepage:
   url:   /
