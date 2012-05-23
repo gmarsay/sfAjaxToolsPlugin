@@ -33,3 +33,13 @@ all:
 
     # Enable the database manager
     use_database:           true
+
+    # Enable modules
+    enabled_modules:
+      - main
+      - project
+
+    standard_helpers:
+      - Partial
+      - Date
+      - jQueryVal

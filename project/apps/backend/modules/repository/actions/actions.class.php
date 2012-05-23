@@ -19,4 +19,20 @@ class repositoryActions extends backendActions
   {
     $this->forward('main', 'index');
   }
+
+  public function executeList(sfWebRequest $request)
+  {
+    if (!$request->getParameter('path'))
+    {
+      echo 'Error, path is empty.';
+    }
+
+    $this->files = sfFinder::type('any')->maxDepth(0)->sort_by_type()->prune()->in($request->getParameter('path'));
+    $this->current_directory =  $request->getParameter('path');
+
+    if ($request->isXmlHttpRequest())
+    {
+      $this->setLayout(false);
+    }
+  }
 }

@@ -9,14 +9,17 @@ default:
     title:         Labs
     #description:  symfony project
     #keywords:     symfony, project
-    #language:     en
+    language:     fr
     #robots:       index, follow
 
   stylesheets:
     - main.css
+    - sfadmin.css
   javascripts:
     - jquery/core.js
     - jquery/ui.js
+    - jquery/validate.js
+    - jquery/validate-extended.js
   has_layout:     true
   layout:         layout
 

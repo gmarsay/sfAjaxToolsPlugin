@@ -1,7 +1,7 @@
 <?php use_stylesheets_for_form($form) ?>
 <?php use_javascripts_for_form($form) ?>
 
-<form action="<?php echo url_for('project/'.($form->getObject()->isNew() ? 'create' : 'update').(!$form->getObject()->isNew() ? '?slug='.$form->getObject()->getSlug() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
+<?php echo jquery_val_form_tag($form, array('action' => url_for('project/'.($form->getObject()->isNew() ? 'create' : 'update').(!$form->getObject()->isNew() ? '?slug='.$form->getObject()->getSlug() : '')))) ?>
 <?php if (!$form->getObject()->isNew()): ?>
 <input type="hidden" name="sf_method" value="put" />
 <?php endif; ?>
@@ -20,7 +20,7 @@
         </td>
       </tr>
     </tfoot>
-    <tbody>
+    <tbody id="sf_admin_container">
       <?php echo $form->renderGlobalErrors() ?>
       <tr>
         <th align="left">Nom du projet</th>

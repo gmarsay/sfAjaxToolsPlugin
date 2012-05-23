@@ -6,6 +6,14 @@
 </div>
 
 <div>
+  <h3>Documentation</h3>
+</div>
+
+<div>
+  <h3>T&eacute;l&eacute;chargement</h3>
+</div>
+
+<div>
   <h3>D&eacute;p&ocirc;t</h3>
   <? include_component('repository', 'list', array('repository' => $project->getRepository()))?>
 </div>
