@@ -1,3 +1,0 @@
-[submodule "sfAjaxToolsPlugin"]
-  path = project/plugins/sfAjaxToolsPlugin
-  url = git@github.com:gmarsay/sfAjaxToolsPlugin.git
